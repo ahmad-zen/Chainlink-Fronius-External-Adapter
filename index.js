@@ -20,7 +20,7 @@ const createRequest = (input, callback) => {
   const validator = new Validator(callback, input, customParams)
   const jobRunID = validator.validated.id
   const endpoint = validator.validated.data.endpoint || 'solar_api/v1/GetInverterRealtimeData.cgi'
-  const url = `https://sample-nodejs-lhygg.ondigitalocean.app/${endpoint}`
+  const url = `https://sample-nodejs-lhygg.ondigitalocean.app:3030/${endpoint}`
   var DeviceId = validator.validated.data.DeviceId
   const headers = {
     DeviceId : `${DeviceId}`
